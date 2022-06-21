@@ -1,3 +1,5 @@
+# ignora quaisquer diretórios chamados "fontawesome"
+.fontawesome/
 # Logs
 logs
 *.log
