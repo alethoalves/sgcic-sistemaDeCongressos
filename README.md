@@ -1,4 +1,4 @@
-SGCIC
+SGCIC 
 Sistema de Gerenciamento do Congresso de Iniciação Científica
 ### Pré-requisitos globais:
 `npm i -g nodemon typescript ts-node`
