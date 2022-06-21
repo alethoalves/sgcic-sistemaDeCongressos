@@ -1,0 +1,51 @@
+{{>partials/admin/header}}
+<div class="container center">
+        <main>
+            {{#dataForm.new}}
+            <h1><a href="/admin">&larr;</a> CRIAR CONGRESSO</h1>
+            {{/dataForm.new}}
+            {{#dataForm.edit}}
+            <h1><a href="/admin">&larr;</a> EDITAR CONGRESSO</h1>
+            {{/dataForm.edit}}
+            <section>
+                <form action="/admin/edition/" method="POST">
+                    <label>
+                        Ano do Congresso
+                        <input required {{#dataForm.edit}} readonly {{/dataForm.edit}} value="{{dataForm.data.year}}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(4, this.maxLength);" type="number" name="year" maxlength = "4"  >
+                    </label>
+                    <label>
+                        Nome do Congresso
+                        <input type="text" required value="{{dataForm.data.name}}" name="name">
+                    </label>
+                    <label>
+                        Status
+                        <div class="selectInput">
+                            <select name="status" required>
+                                <option selected></option>
+                                <option value="Congresso online">Congresso online</option>
+                                <option value="Congresso encerrado">Congresso encerrado</option>
+                            </select>
+                        </div>
+                    </label>
+                    <div class="btns">
+                        <input class="btn-blue" type="submit" 
+                    {{#dataForm.new}}
+                    value="Criar"
+                    {{/dataForm.new}}
+                    {{#dataForm.edit}}
+                    value="Editar"
+                    {{/dataForm.edit}}
+                    >
+                    {{#dataForm.edit}}
+                    <a href="/admin/edition/delete/{{dataForm.data.year}}" class="btn-danger">Excluir</a>
+                    {{/dataForm.edit}}
+                    </div>
+                </form>
+            </section>
+        </main>
+
+    </div>
+    
+</body>
+
+</html>
