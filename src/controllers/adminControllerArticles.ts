@@ -1,7 +1,7 @@
 import { query, Request, Response } from 'express';
 import {Article} from '../models/Article';
 
-let menu = {editions:false,articles:true}
+let menu = {editions:false,articles:true} 
 
 export const articles =  async (req: Request, res: Response)=>{
     let articles = await Article.getAll();
