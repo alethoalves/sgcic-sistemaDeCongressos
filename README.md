@@ -1,5 +1,5 @@
-Arquivos do módulo inicial de Node + Typescript, da estrutura MVC aplicada.
-
+SGCIC
+Sistema de Gerenciamento do Congresso de Iniciação Científica
 ### Pré-requisitos globais:
 `npm i -g nodemon typescript ts-node`
 
